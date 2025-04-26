@@ -1,11 +1,9 @@
 // App.java
 import controllers.LoginController;
-import models.User;
-import views.LoginView;
-
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
+import models.User;
+import views.LoginView;
 
 public class App {
     public static void main(String[] args) {

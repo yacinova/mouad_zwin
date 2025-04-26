@@ -14,7 +14,7 @@ public class LoginView extends JFrame {
 
     public LoginView() {
         setTitle("🛒 Stock Manager - Login");
-        setSize(500, 500);
+        setSize(1000, 700);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

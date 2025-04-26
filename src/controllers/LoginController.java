@@ -1,13 +1,12 @@
 package controllers;
 
-import models.User;
-import views.DashboardView;
-import views.LoginView;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 import javax.swing.SwingUtilities;
+import models.User;
+import views.LoginView;
+import views.ProductListView;
 
 public class LoginController {
     private LoginView view;
@@ -33,7 +32,11 @@ public class LoginController {
                     // Open Dashboard view and close login
                     SwingUtilities.invokeLater(() -> {
                         view.dispose(); // Close the login window
-                        new DashboardView(user.getUsername(), user.getRole()); // Show dashboard
+                        // Create and show the ProductListView
+                        ProductListView productListView = new ProductListView();
+                        // The ProductListView constructor should handle making the frame visible.
+                        // If not, uncomment the following line:
+                        productListView.setVisible(true); // Make the new window visible
                     });
 
                     return;
